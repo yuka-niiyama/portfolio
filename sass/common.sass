@@ -1,0 +1,273 @@
+@import 'reset'
+
+@media screen and (min-width: 800px)
+  .container
+    width: 800px
+  .card
+    width: calc(50% - 34px)
+  .card__icon
+    img
+      width: calc(100% - 32px)
+  .pane-2
+    width: calc(50% - 32px)
+  .pane-4
+    width: calc((100% / 4) - 32px)
+  header
+    width: 768px
+
+@media screen and (max-width: 799px)
+  .container
+    width: calc(100% - 32px)
+  .card
+    width: calc(100% - 34px)
+  .card__icon
+    width: 100%
+    height: 300px
+    img
+      width: calc(100% - 32px)
+      max-width: 484px
+  .pane-2
+    width: calc(100% - 32px)
+  .pane-4
+    width: calc(100% - 32px)
+  header
+    width: calc(100% - 32px)
+    a[type=button]
+      width: 100%
+      text-align: center
+    li
+      width: calc(100% - 34px)
+      margin: 8px 0
+
+
+body
+  width: 100%
+  line-height: 1.5
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif
+  font-size: 16px
+  color: black
+
+h1
+  display: block
+  font-size: 3.5em
+  margin-top: 0.5em
+  margin-bottom: 0.5em
+  margin-left: 0
+  margin-right: 0
+  font-weight: bold
+
+h2
+  display: block
+  font-size: 2.5em
+  margin-top: 0.83em
+  margin-bottom: 0.83em
+  margin-left: 0
+  margin-right: 0
+  font-weight: bold
+
+h3
+  display: block
+  font-size: 1.17em
+  margin-top: 1.5em
+  margin-bottom: 1.5em
+  margin-left: 0
+  margin-right: 0
+  font-weight: bold
+
+h4
+  display: block
+  font-size: 1em
+  margin-top: 1.33em
+  margin-bottom: 1.33em
+  margin-left: 0
+  margin-right: 0
+  font-weight: bold
+  color: rgb(168,168,168)
+
+h5
+  display: block
+  font-size: .83em
+  margin-top: 1.67em
+  margin-bottom: 1.67em
+  margin-left: 0
+  margin-right: 0
+  font-weight: bold
+  color: rgb(168,168,168)
+
+p
+  display: block
+  margin-top: 1em
+  margin-bottom: 1em
+  margin-left: 0
+  margin-right: 0
+  line-height: 1.82
+
+ol
+  li
+    display: list-item
+    margin-bottom: .5em
+    margin-left: 1.25em
+    line-height: 1.5
+    list-style-type: decimal
+
+img
+  width: 100%
+
+img.shadow
+  box-shadow: 4px 4px 4px rgba(0,0,0,.2)
+  margin-bottom: 16px
+
+.container
+  //width: 800px
+  margin: 160px auto
+
+  &:after
+    content: ""
+    clear: both
+    display: block
+
+  & > *
+    margin-left: 16px
+    margin-right: 16px
+
+.card
+  //width: calc(50% - 34px)
+  float: left
+  margin: 16px
+  border: 1px #eee solid
+  background: white
+  box-shadow: 0 2px 4px rgba(0,0,0,.1)
+
+  &:hover
+    opacity: .8
+    filter: alpha(opacity=80)
+
+.optimalbiz
+  background: rgb(82,156,117)
+
+.switch
+  background: rgb(235,84,20)
+
+.card__icon
+  position: relative
+  //width: 100%
+  height: 300px
+
+  img
+    position: absolute
+    //width: calc(100% - 32px)
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+.card__image
+  width: 100%
+
+.card__inner
+  margin: 24px
+
+  table
+    width: 100%
+
+    td
+      padding: 8px 0
+
+    td:last-of-type
+      text-align: right
+      letter-spacing: .5em
+
+
+.pane-2
+  //width: calc(50% - 34px)
+  float: left
+  margin: 16px
+
+.pane-4
+  //width: calc((100% / 4) - 32px)
+  float: left
+  margin: 16px
+  border: none
+  box-shadow: none
+
+.pane__inner
+  margin: 24px
+
+h2, h3
+  text-align: center
+
+.name-ja
+  margin-bottom: 0
+  text-align: left
+
+.address
+  margin-top: 0
+  font-weight: normal
+
+a
+  text-decoration: none
+  color: black
+
+header
+  //width: 768px
+  margin: 80px auto
+
+  li
+    float: left
+    margin-right: 8px
+
+  a[type=button]
+    display: inline-block
+    padding: 0 16px
+    border: 1px black solid
+    line-height: 32px
+    background: white
+    color: black 
+
+    &:hover
+      background: black
+      color: white
+
+nav
+  &:after
+    content: ""
+    clear: both
+    display: block
+
+.hero.optimalbiz
+  background: rgb(82,156,117)
+
+.hero.switch
+  background: rgb(235,84,20)
+
+.hero
+  padding: 16px 0
+  text-align: center
+  color: white
+
+  h1
+    margin-bottom: 0
+    font-weight: normal
+
+  img
+    margin: 32px 0
+
+  .container
+    margin: 40px auto
+
+  dl
+    text-align: left
+
+  dt
+    font-weight: bold
+
+  dd
+    display: list-item
+    margin-left: 2em
+    list-style-type: disc
+
+  dd.me
+    color: rgb(255,160,26)
+
+
