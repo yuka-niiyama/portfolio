@@ -35,95 +35,64 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@media screen and (min-width: 800px) {
-  .container {
-    width: 800px; }
-  .card {
-    width: calc(50% - 34px); }
-  .card__icon img {
-    width: calc(100% - 32px); }
-  .pane-2 {
-    width: calc(50% - 32px); }
-  .pane-4 {
-    width: calc((100% / 4) - 32px); }
-  header {
-    width: 768px; } }
-
-@media screen and (max-width: 799px) {
-  .container {
-    width: calc(100% - 32px); }
-  .card {
-    width: calc(100% - 34px); }
-  .card__icon {
-    width: 100%;
-    height: 300px; }
-    .card__icon img {
-      width: calc(100% - 32px);
-      max-width: 484px; }
-  .pane-2 {
-    width: calc(100% - 32px); }
-  .pane-4 {
-    width: calc(100% - 32px); }
-  header {
-    width: calc(100% - 32px); }
-    header a[type=button] {
-      width: 100%;
-      text-align: center; }
-    header li {
-      width: calc(100% - 34px);
-      margin: 8px 0; } }
+.container:after, header nav:after {
+  content: "";
+  clear: both;
+  display: block; }
 
 body {
   width: 100%;
   line-height: 1.5;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   font-size: 16px;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   color: black; }
 
 h1 {
   display: block;
-  font-size: 3.5em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   margin-left: 0;
   margin-right: 0;
+  font-size: 3.5em;
   font-weight: bold; }
 
 h2 {
   display: block;
-  font-size: 2.5em;
   margin-top: 0.83em;
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
-  font-weight: bold; }
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center; }
 
 h3 {
   display: block;
-  font-size: 1.17em;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   margin-left: 0;
   margin-right: 0;
-  font-weight: bold; }
+  font-size: 1.17em;
+  font-weight: bold;
+  text-align: center; }
 
 h4 {
   display: block;
-  font-size: 1em;
   margin-top: 1.33em;
   margin-bottom: 1.33em;
   margin-left: 0;
   margin-right: 0;
+  font-size: 1em;
   font-weight: bold;
   color: #a8a8a8; }
 
 h5 {
   display: block;
-  font-size: .83em;
   margin-top: 1.67em;
   margin-bottom: 1.67em;
   margin-left: 0;
   margin-right: 0;
+  font-size: .83em;
   font-weight: bold;
   color: #a8a8a8; }
 
@@ -133,34 +102,36 @@ p {
   margin-bottom: 1em;
   margin-left: 0;
   margin-right: 0;
-  line-height: 1.82; }
+  line-height: 1.82;
+  font-size: 1em; }
+
+a {
+  text-decoration: none;
+  color: black; }
 
 ol li {
   display: list-item;
-  margin-bottom: .5em;
   margin-left: 1.25em;
+  margin-bottom: .5em;
   line-height: 1.5;
   list-style-type: decimal; }
 
 img {
   width: 100%; }
-
-img.shadow {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 16px; }
+  img.shadow {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 16px; }
 
 .container {
+  width: 800px;
   margin: 160px auto; }
-  .container:after {
-    content: "";
-    clear: both;
-    display: block; }
   .container > * {
     margin-left: 16px;
     margin-right: 16px; }
 
 .card {
   float: left;
+  width: calc(50% - 34px);
   margin: 16px;
   border: 1px #eee solid;
   background: white;
@@ -169,17 +140,18 @@ img.shadow {
     opacity: .8;
     filter: alpha(opacity=80); }
 
-.optimalbiz {
-  background: #529c75; }
-
-.switch {
-  background: #eb5414; }
-
 .card__icon {
   position: relative;
+  width: 100%;
   height: 300px; }
+  .card__icon.optimalbiz {
+    background: #529c75; }
+  .card__icon.switch {
+    background: #eb5414; }
   .card__icon img {
     position: absolute;
+    width: calc(100% - 32px);
+    width: calc(100% - 32px);
     top: 0;
     bottom: 0;
     left: 0;
@@ -193,17 +165,19 @@ img.shadow {
   margin: 24px; }
   .card__inner table {
     width: 100%; }
-    .card__inner table td {
-      padding: 8px 0; }
-    .card__inner table td:last-of-type {
+  .card__inner td {
+    padding: 8px 0; }
+    .card__inner td:last-of-type {
       text-align: right;
       letter-spacing: .5em; }
 
 .pane-2 {
+  width: calc(50% - 34px);
   float: left;
   margin: 16px; }
 
 .pane-4 {
+  width: calc((100% / 4) - 32px);
   float: left;
   margin: 16px;
   border: none;
@@ -212,10 +186,7 @@ img.shadow {
 .pane__inner {
   margin: 24px; }
 
-h2, h3 {
-  text-align: center; }
-
-.name-ja {
+.name {
   margin-bottom: 0;
   text-align: left; }
 
@@ -223,11 +194,8 @@ h2, h3 {
   margin-top: 0;
   font-weight: normal; }
 
-a {
-  text-decoration: none;
-  color: black; }
-
 header {
+  width: 768px;
   margin: 80px auto; }
   header li {
     float: left;
@@ -243,35 +211,52 @@ header {
       background: black;
       color: white; }
 
-nav:after {
-  content: "";
-  clear: both;
-  display: block; }
-
-.hero.optimalbiz {
-  background: #529c75; }
-
-.hero.switch {
-  background: #eb5414; }
-
 .hero {
   padding: 16px 0;
-  text-align: center;
   color: white; }
-  .hero h1 {
-    margin-bottom: 0;
-    font-weight: normal; }
-  .hero img {
-    margin: 32px 0; }
+  .hero.optimalbiz {
+    background: #529c75; }
+  .hero.switch {
+    background: #eb5414; }
   .hero .container {
     margin: 40px auto; }
-  .hero dl {
-    text-align: left; }
+  .hero h1 {
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center; }
+  .hero p {
+    text-align: center; }
+  .hero img {
+    margin: 32px 0; }
   .hero dt {
     font-weight: bold; }
   .hero dd {
     display: list-item;
     margin-left: 2em;
     list-style-type: disc; }
-  .hero dd.me {
-    color: #ffa01a; }
+    .hero dd.me {
+      color: #ffa01a; }
+
+@media screen and (max-width: 799px) {
+  header {
+    width: calc(100% - 32px); }
+    header a[type=button] {
+      width: 100%;
+      text-align: center; }
+    header li {
+      width: calc(100% - 34px);
+      margin: 8px 0; }
+  .container {
+    width: calc(100% - 32px); }
+  .card {
+    width: calc(100% - 34px); }
+  .card__icon {
+    width: 100%;
+    height: 300px; }
+    .card__icon img {
+      width: calc(100% - 32px);
+      max-width: 484px; }
+  .pane-2 {
+    width: calc(100% - 32px); }
+  .pane-4 {
+    width: calc(100% - 32px); } }
