@@ -2,6 +2,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
+@import url("https://fonts.googleapis.com/css?family=Kalam:300,400");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -34,11 +35,6 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
-
-.container:after, header nav:after {
-  content: "";
-  clear: both;
-  display: block; }
 
 body {
   width: 100%;
@@ -122,6 +118,204 @@ img {
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 16px; }
 
+header nav:after,
+header .inner:after, .container:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+header,
+header h1,
+header a,
+header .inner,
+.main.smooth,
+#nav-open {
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease; }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background: white; }
+  header h1 {
+    display: block;
+    margin: 0;
+    line-height: 160px;
+    font-family: 'Kalam', cursive;
+    font-weight: 300;
+    color: #6e6e6e; }
+  header nav {
+    position: relative;
+    display: block; }
+  header ul {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 64px 0; }
+  header li {
+    float: left;
+    margin-left: 8px; }
+  header a[type=button] {
+    display: inline-block;
+    padding: 0 16px;
+    line-height: 32px;
+    font-size: 1em;
+    color: #6e6e6e; }
+    header a[type=button]:hover {
+      box-shadow: 0 1px 0 rgba(85, 85, 85, 0.5);
+      background: #6e6e6e;
+      color: white; }
+    header a[type=button]:active {
+      box-shadow: none;
+      color: rgba(255, 255, 255, 0.3); }
+  header .inner {
+    position: relative;
+    width: 768px;
+    margin: 0 auto;
+    padding: 16px 0; }
+
+header.scrolled {
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7); }
+  header.scrolled > * {
+    float: left; }
+  header.scrolled h1 {
+    display: inline-block;
+    line-height: 32px;
+    font-size: 1.5em;
+    color: rgba(110, 110, 110, 0.5); }
+  header.scrolled ul {
+    margin: 0; }
+  header.scrolled .inner {
+    width: calc(100% - 64px);
+    margin: 0 32px; }
+
+#nav-input,
+#nav-open,
+#nav-content .menu-title {
+  display: none; }
+
+.main {
+  margin-top: 192px; }
+  .main.smooth {
+    margin-top: 0; }
+
+@media screen and (max-width: 799px) {
+  header h1 {
+    display: inline-block;
+    font-size: 2em; }
+  header .inner {
+    width: calc(100% - 64px); }
+  header.scrolled h1 {
+    display: inline-block; }
+  header.scrolled #nav-drawer {
+    display: inline-block; }
+  header.scrolled #nav-open {
+    margin: 0; }
+  #nav-drawer {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+  #nav-open {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    margin-top: 69px;
+    margin-bottom: 69px;
+    vertical-align: middle; }
+    #nav-open span {
+      position: absolute;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background: #6e6e6e;
+      display: block;
+      content: '';
+      cursor: pointer; }
+      #nav-open span:before, #nav-open span:after {
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background: #6e6e6e;
+        display: block;
+        content: '';
+        cursor: pointer; }
+      #nav-open span:before {
+        bottom: -8px; }
+      #nav-open span:after {
+        bottom: -16px; }
+  #nav-close {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in-out; }
+  #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 80%;
+    max-width: 330px;
+    height: 100%;
+    background: gainsboro;
+    transition: .4s ease-in-out;
+    -webkit-transform: translateX(185%);
+    transform: translateX(185%); }
+    #nav-content .menu-title {
+      display: block;
+      width: 100%;
+      height: 56px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #b4b4b4;
+      line-height: 56px;
+      font-size: 1.5em;
+      font-weight: lighter;
+      text-align: center;
+      color: #6e6e6e; }
+    #nav-content ul {
+      position: relative;
+      margin: 0;
+      padding: 0 16px; }
+    #nav-content li {
+      float: none;
+      width: 100%;
+      margin: 0; }
+    #nav-content a[type=button] {
+      width: calc(100% - 32px);
+      margin: 5px 0;
+      padding: 0 16px;
+      line-height: 40px;
+      box-shadow: 0 1px 0 rgba(85, 85, 85, 0.3);
+      text-align: center;
+      background: white;
+      color: #0f0f0f; }
+      #nav-content a[type=button]:hover {
+        background: #6e6e6e;
+        color: white; }
+      #nav-content a[type=button]:active {
+        box-shadow: none;
+        color: rgba(255, 255, 255, 0.3); }
+  #nav-input:checked ~ #nav-close {
+    display: block;
+    opacity: .5; }
+  #nav-input:checked ~ #nav-content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: -2px 0 #b4b4b4; } }
+
 .container {
   width: 800px;
   margin: 160px auto; }
@@ -194,23 +388,6 @@ img {
   margin-top: 0;
   font-weight: normal; }
 
-header {
-  width: 768px;
-  margin: 80px auto; }
-  header li {
-    float: left;
-    margin-right: 8px; }
-  header a[type=button] {
-    display: inline-block;
-    padding: 0 16px;
-    border: 1px black solid;
-    line-height: 32px;
-    background: white;
-    color: black; }
-    header a[type=button]:hover {
-      background: black;
-      color: white; }
-
 .hero {
   padding: 16px 0;
   color: white; }
@@ -238,14 +415,6 @@ header {
       color: #ffa01a; }
 
 @media screen and (max-width: 799px) {
-  header {
-    width: calc(100% - 32px); }
-    header a[type=button] {
-      width: 100%;
-      text-align: center; }
-    header li {
-      width: calc(100% - 34px);
-      margin: 8px 0; }
   .container {
     width: calc(100% - 32px); }
   .card {
