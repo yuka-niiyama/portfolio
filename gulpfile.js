@@ -25,19 +25,25 @@ gulp.task('sass', function () {
     .pipe(livereload());
 });
 
-gulp.task('copy', function() {
+gulp.task('javascript', function() {
+  return gulp.src('./javascript/**/*')
+    .pipe(gulp.dest('./docs/javascript'));
+});
+
+gulp.task('image', function() {
   return gulp.src('./image/**/*')
     .pipe(gulp.dest('./docs/image'));
 });
 
 gulp.task('build', function() {
-  runSequence('clean', ['pug', 'sass', 'copy']);
+  runSequence('clean', ['pug', 'sass', 'image', 'javascript']);
 });
 
 gulp.task('watch', ['build'], function () {
   livereload.listen();
   gulp.watch('./pug/**/*.pug', ['pug']);
   gulp.watch('./sass/**/*.sass', ['sass']);
+  gulp.watch('./javascript/**/*.js', ['javascript']);
 });
 
 gulp.task('webserver', function () {
