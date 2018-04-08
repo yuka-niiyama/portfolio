@@ -2,7 +2,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
-@import url("https://fonts.googleapis.com/css?family=Kalam:300,400");
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: black; }
+  color: #0f0f0f; }
 
 h1 {
   display: block;
@@ -58,6 +58,7 @@ h2 {
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
   font-size: 2.5em;
   font-weight: bold;
   text-align: center; }
@@ -145,8 +146,9 @@ header {
     display: block;
     margin: 0;
     line-height: 160px;
-    font-family: 'Kalam', cursive;
-    font-weight: 300;
+    font-family: 'Encode Sans Semi Expanded', sans-serif;
+    font-weight: 200;
+    font-style: normal;
     color: #6e6e6e; }
   header nav {
     position: relative;
@@ -166,7 +168,7 @@ header {
     font-size: 1em;
     color: #6e6e6e; }
     header a[type=button]:hover {
-      box-shadow: 0 1px 0 rgba(85, 85, 85, 0.5);
+      box-shadow: 0 1px 0 rgba(85, 85, 85, 0.3);
       background: #6e6e6e;
       color: white; }
     header a[type=button]:active {
