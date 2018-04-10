@@ -83,6 +83,9 @@ img
   &.shadow
     box-shadow: 4px 4px 4px rgba(0,0,0,.2)
     margin-bottom: 16px
+  &.flow
+    width: 80%
+    margin: 0 10%
 
 aside
   display: block
@@ -131,6 +134,11 @@ header .inner
   & > *
     margin-left: 16px
     margin-right: 16px
+  li
+    display: list-item
+    margin: 8px 0
+    margin-left: 16px
+    list-style-type: disc
 
 .card
   float: left
@@ -173,6 +181,10 @@ header .inner
     &:last-of-type
       text-align: right
       letter-spacing: .5em
+
+.pane-wrap
+  margin: 16px auto
+  @extend %clearfix
 
 .pane-2
   width: calc(50% - 34px)
