@@ -1,8 +1,8 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
 @import url("https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded");
+@import url("http://fonts.googleapis.com/earlyaccess/notosansjp.css");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -40,7 +40,8 @@ body {
   width: 100%;
   line-height: 1.5;
   font-size: 16px;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+  font-weight: 400;
   color: #0f0f0f; }
 
 h1 {
@@ -50,7 +51,7 @@ h1 {
   margin-left: 0;
   margin-right: 0;
   font-size: 3.5em;
-  font-weight: bold; }
+  font-weight: 500; }
 
 h2 {
   display: block;
@@ -58,9 +59,8 @@ h2 {
   margin-bottom: 0.83em;
   margin-left: 0;
   margin-right: 0;
-  font-family: 'Encode Sans Semi Expanded', sans-serif;
   font-size: 2.5em;
-  font-weight: bold;
+  font-weight: 500;
   text-align: center; }
 
 h3 {
@@ -70,7 +70,7 @@ h3 {
   margin-left: 0;
   margin-right: 0;
   font-size: 1.17em;
-  font-weight: bold;
+  font-weight: 500;
   text-align: center; }
 
 h4 {
@@ -80,7 +80,7 @@ h4 {
   margin-left: 0;
   margin-right: 0;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 500;
   color: #a8a8a8; }
 
 h5 {
@@ -90,7 +90,7 @@ h5 {
   margin-left: 0;
   margin-right: 0;
   font-size: .83em;
-  font-weight: bold;
+  font-weight: 500;
   color: #a8a8a8; }
 
 p {
@@ -429,7 +429,7 @@ header.scrolled {
   .hero img {
     margin: 32px 0; }
   .hero dt {
-    font-weight: bold; }
+    font-weight: 500; }
   .hero dd {
     display: list-item;
     margin-left: 2em;
