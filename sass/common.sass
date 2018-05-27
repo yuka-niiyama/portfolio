@@ -110,6 +110,26 @@ aside
   -moz-transition: all 0.4s ease
   -o-transition: all 0.4s ease
 
+footer
+  nav
+    width: 100%
+    margin-bottom: 160px
+    text-align: center
+    .button
+      @extend %animation
+      display: inline-block
+      width: 32px
+      line-height: 32px
+      padding: 8px
+      border: 3px solid rgb(110,110,110)
+      font-size: 24px
+      color: rgb(110,110,110)
+      background: white
+      &:hover
+        box-shadow: 0 1px 0 rgba(85,85,85,.3)
+        background: rgb(110,110,110)
+        color: rgb(255,255,255)
+
 //---------- ヘッダー ----------//
 
 @import 'header'

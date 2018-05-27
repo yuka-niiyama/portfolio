@@ -138,7 +138,7 @@ header .inner:after, .container:after, .pane-wrap:after {
   clear: both;
   display: block; }
 
-header,
+footer nav .button, header,
 header h1,
 header a,
 header .inner,
@@ -148,6 +148,24 @@ header .inner,
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease; }
+
+footer nav {
+  width: 100%;
+  margin-bottom: 160px;
+  text-align: center; }
+  footer nav .button {
+    display: inline-block;
+    width: 32px;
+    line-height: 32px;
+    padding: 8px;
+    border: 3px solid #6e6e6e;
+    font-size: 24px;
+    color: #6e6e6e;
+    background: white; }
+    footer nav .button:hover {
+      box-shadow: 0 1px 0 rgba(85, 85, 85, 0.3);
+      background: #6e6e6e;
+      color: white; }
 
 header {
   position: fixed;
